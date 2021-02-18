@@ -6,6 +6,10 @@ public class coinScript : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D col)
     {
+        if(col.gameObject.tag.Equals("Player")){
+        SoundManagerScript.PlaySound("CoinPickup");
         Destroy(gameObject);
+
+        }
     }
 }
