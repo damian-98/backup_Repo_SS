@@ -10,6 +10,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyAction : MonoBehaviour
 {
@@ -45,6 +46,5 @@ public class EnemyAction : MonoBehaviour
        Debug.Log("damage taken");// This console log is just proof that I am hitting the enemy and that it is working.
    }
     // #2: ####################################################################################################################################################
-
 }
 // 1:####################################################################################################################################################

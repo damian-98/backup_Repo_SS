@@ -2,25 +2,22 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/EnemyAction.cs">
     <Files>
       <File FileName="Assets/coinScript.cs" Line="5" Column="19" />
-      <File FileName="Assets/Scripts/Heart.cs" Line="9" Column="28" />
+      <File FileName="Assets/Scripts/Heart.cs" />
       <File FileName="Assets/EnemyAction.cs" Line="28" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Seminar 2D Game" expanded="True" />
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.UnitTesting.TestPad">
-        <State name="__root__">
-          <Node name="Seminar 2D Game" expanded="True" selected="True" />
+          <Node name="Seminar 2D Game" expanded="True">
+            <Node name="Assets" expanded="True" selected="True" />
+          </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6542f0c4-09e5-4a3a-843f-7507f9a650a5" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7f19e4da-1978-4b6b-8123-20b9f9b52d2b" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
