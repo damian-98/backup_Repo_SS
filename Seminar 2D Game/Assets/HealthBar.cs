@@ -12,23 +12,24 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    public Slider Slider;
-    public Color Low;//This displays the color bar for low health.
-    public Color High;//This displays the color for high health.
-    public Vector3 offset;// This helps for charaters that dont share the same height.
+    public Slider slider;
+    public Gradient gradient;
+    public Image fill;
 
-    public void SetHealth(float health, float maxHealth)
+    public void SetMaxHealth(float health, float maxHealth)
     {
-        Slider.gameObject.SetActive(health < maxHealth);//This line of code makes it where if the enemy is lower than full health then the health bar will show.
-        Slider.value = health;//This sets the current health.
-        Slider.maxValue = maxHealth;//This sets the max health.
+        slider.gameObject.SetActive(health < maxHealth);
+        slider.value = health;
+        slider.maxValue = maxHealth;
 
-        Slider.fillRect.GetComponentInChildren<Image>().color = Color.Lerp(Low, High, Slider.normalizedValue);//This line of code sets the color of the health bar depending on how hard the enemy is.
+        fill.color = gradient.Evaluate(1f);
     }
 
-    void Start()
+    public void SetHealth(float health)
     {
-        Slider.transform.position = Camera.main.WorldToScreenPoint(transform.parent.position + offset);//This code transforms from a 3D world postion to a 2D world postion. It's helps with movement.
+       slider.value = health;
+
+       fill.color = gradient.Evaluate(slider.normalizedValue);
     }
 }
 // ####################################################################################################################################################

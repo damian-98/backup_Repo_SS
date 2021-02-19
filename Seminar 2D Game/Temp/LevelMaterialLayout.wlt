@@ -427,7 +427,7 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/FPS/Art/Materials/Level
   m_LastFoldersGridSize: 90
-  m_LastProjectPath: /Users/ryanusher/Desktop/GitHub/Projects/Seminar 2D Game
+  m_LastProjectPath: /Users/DAM1998/SeminarDevGroup_Backup/Project/Seminar 2D Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
