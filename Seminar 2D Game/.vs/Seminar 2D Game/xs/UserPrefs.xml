@@ -1,9 +1,10 @@
 ﻿<Properties StartupConfiguration="{A9DAD0B8-80AB-5FAE-5CE3-F98E6A3ADE5C}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/EnemyAction.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PlayerMovement.cs">
     <Files>
       <File FileName="Assets/coinScript.cs" Line="5" Column="19" />
       <File FileName="Assets/Scripts/Heart.cs" />
       <File FileName="Assets/EnemyAction.cs" Line="28" Column="6" />
+      <File FileName="Assets/PlayerMovement.cs" Line="102" Column="83" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,7 +18,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7f19e4da-1978-4b6b-8123-20b9f9b52d2b" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="63bef484-1e13-4e4b-a087-c1e958c709f2" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

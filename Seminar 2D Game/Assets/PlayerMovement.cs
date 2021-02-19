@@ -16,6 +16,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour{
+    public ParticleSystem dust;
    public GameObject player;
 // #3: ####################################################################################################################################################
 	[Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;			// Amount of maxSpeed applied to crouching movement. 1 = 100%
@@ -84,7 +85,7 @@ public class PlayerMovement : MonoBehaviour{
             transform.eulerAngles = new Vector3(0, 0, 0); // This code enables the player to face right when user is moving right.
         }
         else if(moveInput < 0){
-            transform.eulerAngles = new Vector3(0, 180, 0); // This code enables the player to face left when user is moving left.
+            transform.eulerAngles = new Vector3(0, 180, 0); // This code enables the player to face left when user is moving left. 
         }
         // #1: ####################################################################################################################################################
          if(Input.GetButtonDown("Jump") && Mathf.Abs(rb.velocity.y) < 0.001f){ // This code enables the spacebar to activate chracter jump when pressed down.
@@ -93,7 +94,8 @@ public class PlayerMovement : MonoBehaviour{
             isJumping = true;
             jumpTimeCounter = jumpTime;
             rb.velocity = Vector2.up * jumpForce;
-         }
+            CreateDust();
+        }
 
         if(Input.GetKey(KeyCode.Space) && isJumping == true){ // This code checks how long the user is holding down the spacebar.
 
@@ -147,6 +149,12 @@ public class PlayerMovement : MonoBehaviour{
                 isJumping = true;
             }
         }
+
+        void CreateDust()
+    {
+        dust.Play();
+    }
+
 }       // #4: ####################################################################################################################################################
 
 // ####################################################################################################################################################
