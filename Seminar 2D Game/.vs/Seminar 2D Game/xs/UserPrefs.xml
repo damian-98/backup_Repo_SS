@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{A9DAD0B8-80AB-5FAE-5CE3-F98E6A3ADE5C}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/EnemyAction.cs">
+    <Files>
+      <File FileName="Assets/coinScript.cs" Line="5" Column="19" />
+      <File FileName="Assets/Scripts/Heart.cs" Line="9" Column="28" />
+      <File FileName="Assets/EnemyAction.cs" Line="28" Column="6" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Seminar 2D Game" expanded="True" />
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="Seminar 2D Game" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6542f0c4-09e5-4a3a-843f-7507f9a650a5" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
