@@ -13,12 +13,9 @@ using UnityEngine;
 
 public class EnemyAction : MonoBehaviour
 {
-   public float Hitpoints;// This enables the user to set how many times it takes to hit to kill the enemy.
-   public float MaxHitpoints = 5;//This sets the max hit points.
+   public int Hitpoints;// This enables the user to set how many times it takes to hit to kill the enemy.
+   public int MaxHitpoints = 5;//This sets the max hit points.
    public HealthBar Healthbar;// This is referencing my HealthBar script.
-    // public float speed;
-    // private float dazedTime;// This variable will be used to daze the enemy while it is being attacked.
-    // public float startDazedTime; // This variable will be used to control how long the enemy will be dazed.
 
     void Start()
     {
@@ -26,20 +23,7 @@ public class EnemyAction : MonoBehaviour
         Healthbar.SetMaxHealth(Hitpoints, MaxHitpoints);
     }
 // #2: ####################################################################################################################################################
-    // void Update(){
-    //     if(dazedTime <= 0){// This if else statement is saying if enemy is not dazed move at its normal speed but if dazed stop moving.
-    //         speed = 5;
-    //     } else {
-    //         speed = 0;
-    //         dazedTime -= Time.deltaTime;
-    //     }
-    //     if(Hitpoints <= 0){// This if statement is saying once the enemy gets hit to many time it will be disapear and get destoryed.
-    //         Destroy(gameObject);
-    //     }
-    // }
-
-   public void TakeDamage(float damage){
-    //    dazedTime = startDazedTime;
+   public void TakeDamage(int damage){
        Hitpoints -= damage;
        Healthbar.SetMaxHealth(Hitpoints, MaxHitpoints);
  
