@@ -7,7 +7,6 @@ TagManager:
   - Ground
   - MGround
   - Enemy
-  - Potions
   layers:
   - Default
   - TransparentFX
