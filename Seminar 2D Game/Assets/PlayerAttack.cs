@@ -2,6 +2,7 @@
 # 
 # 1: Title: "HOW TO MAKE 2D MELEE COMBAT - EASY UNITY TUTORIAL" | Author: Blackthornprod | Source: https://www.youtube.com/watch?v=1QfxdUpVh5I&list=WL&index=85 | Date retrieved: 2/16/2021 @ 12:00 pm
 #
+# 2: Title: "Fire PROJECTILES in UNITY" | Author: BMo | Source: https://www.youtube.com/watch?v=uKWbNWPAZq4&list=WL&index=97 | Date retrieved: 2/22/2021 @ 12:00 am
 */
 
 // #1: ####################################################################################################################################################
@@ -19,6 +20,11 @@ public class PlayerAttack : MonoBehaviour
     public float attackRange;
     public int damage;
 
+    // #2: ###########################################
+    public Transform firePostion;//fire balls
+    public GameObject projectile;//fireball projectile
+    // #2: ###########################################
+
     void Update(){
         if(timeBtwAttack <= 0){// This if statement is saying if timeBtwAttack less or equal to 0 then attack.
             if(Input.GetKey(KeyCode.Space)){//This if statement is giving input to the space bar to attack.
@@ -31,6 +37,12 @@ public class PlayerAttack : MonoBehaviour
         } else{
             timeBtwAttack -= Time.deltaTime;
         }
+        // #2: ###########################################
+        if(Input.GetKey(KeyCode.M))//This gets input from player to shoot fire balls.
+        {
+        Instantiate(projectile, firePostion.position, firePostion.rotation);// This line of code spawns a projectile and where to spawn the projectile.
+        }
+        // #2: ###########################################
     }
 
     void OnDrawGizmoSelected(){
