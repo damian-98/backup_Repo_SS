@@ -1,16 +1,20 @@
 ﻿<Properties StartupConfiguration="{A9DAD0B8-80AB-5FAE-5CE3-F98E6A3ADE5C}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PlayerMovement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/CollectableScript.cs">
     <Files>
       <File FileName="Assets/coinScript.cs" Line="5" Column="19" />
-      <File FileName="Assets/Scripts/Heart.cs" />
-      <File FileName="Assets/EnemyAction.cs" Line="28" Column="6" />
+      <File FileName="Assets/Scripts/Heart.cs" Line="9" Column="38" />
+      <File FileName="Assets/EnemyAction.cs" Line="39" Column="32" />
       <File FileName="Assets/PlayerMovement.cs" Line="102" Column="83" />
+      <File FileName="Assets/CollectableScript.cs" Line="12" Column="43" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Seminar 2D Game" expanded="True">
-            <Node name="Assets" expanded="True" selected="True" />
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True" />
+              <Node name="CollectableScript.cs" selected="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
@@ -18,7 +22,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="63bef484-1e13-4e4b-a087-c1e958c709f2" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7af2fb23-aaf0-4ca5-8656-be78685ed658" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
