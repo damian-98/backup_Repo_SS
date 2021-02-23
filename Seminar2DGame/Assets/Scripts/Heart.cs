@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Heart : MonoBehaviour
 {
     public int health;
-    public int numOfHearts;
+    public static int numOfHearts = 3;
 
     public Image[] hearts;
     public Sprite FullHeart;
