@@ -55,7 +55,8 @@ public class EnemyAction : MonoBehaviour
         {
             Time.timeScale = 0; // Time.timeScale just means how much time has elapsed since a 
                                 // certain moment.
-                                
+            FindObjectOfType<AudioManager>().Play("GameOver");
+
             gameOver.SetActive(true);//SetActive true just enables the Game Over text.
         }
      // #3: ####################################################################################################################################################
