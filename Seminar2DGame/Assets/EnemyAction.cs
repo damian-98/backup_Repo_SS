@@ -17,6 +17,8 @@ public class EnemyAction : MonoBehaviour
    public int MaxHitpoints = 5;//This sets the max hit points.
    public HealthBar Healthbar;// This is referencing my HealthBar script.
 
+  
+
     void Start()
     {
         Hitpoints = MaxHitpoints;// This means what every number is set for hit points is also the same for max hit points.
@@ -28,6 +30,8 @@ public class EnemyAction : MonoBehaviour
        Healthbar.SetMaxHealth(Hitpoints, MaxHitpoints);
  
        if(Hitpoints <= 0){// This if statement is saying once the enemy gets hit to many time it will be disapear and get destoryed.
+            FindObjectOfType<AudioManager>().Play("EnemyDeath");
+
            Destroy(gameObject);
         }
         
@@ -36,7 +40,9 @@ public class EnemyAction : MonoBehaviour
     // #2: ####################################################################################################################################################
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        FindObjectOfType<AudioManager>().Play("PlayerHurt");
         Heart.numOfHearts -= 1;
+       
     }
 }
 // 1:####################################################################################################################################################
