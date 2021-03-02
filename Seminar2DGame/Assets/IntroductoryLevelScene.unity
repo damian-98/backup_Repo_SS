@@ -3390,6 +3390,24 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: PlayerHurt
+    clip: {fileID: 8300000, guid: 6c05149e5a2fba64ba172e25a61074b7, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: EnemyDeath
+    clip: {fileID: 8300000, guid: 3da1bf3e1e846084b90f743508ad7324, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: FireBallDeath
+    clip: {fileID: 8300000, guid: 3da1bf3e1e846084b90f743508ad7324, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &776720167
 Transform:
   m_ObjectHideFlags: 0
@@ -11423,7 +11441,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1792884678}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.41, y: -0.62, z: 0}
+  m_LocalPosition: {x: 1.95, y: -0.62, z: 0}
   m_LocalScale: {x: 0.035714284, y: 0.035714284, z: 0.72442776}
   m_Children: []
   m_Father: {fileID: 2082194160}
