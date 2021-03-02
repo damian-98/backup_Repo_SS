@@ -8,6 +8,7 @@ public class CollectableScript : MonoBehaviour
     {
         if (collision.CompareTag("Potions"))
         {
+            FindObjectOfType<AudioManager>().Play("Potions");
             Heart.numOfHearts += 1;
             Destroy(collision.gameObject);
         }
