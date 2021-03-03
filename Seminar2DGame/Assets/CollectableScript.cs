@@ -6,11 +6,23 @@ public class CollectableScript : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Potions"))
+        if (Heart.numOfHearts < 3)
         {
-            FindObjectOfType<AudioManager>().Play("Potions");
-            Heart.numOfHearts += 1;
-            Destroy(collision.gameObject);
+            if (collision.CompareTag("Potions"))
+            {
+                FindObjectOfType<AudioManager>().Play("Potions");
+                Heart.numOfHearts += 1;
+                Destroy(collision.gameObject);
+            }
+        }
+        else if(Heart.numOfHearts == 3)
+        {
+            if (collision.CompareTag("Potions"))
+            {
+                FindObjectOfType<AudioManager>().Play("Potions");
+                CoinCounter.coinAmount += 1;
+                Destroy(collision.gameObject);
+            }
         }
     }
 }
