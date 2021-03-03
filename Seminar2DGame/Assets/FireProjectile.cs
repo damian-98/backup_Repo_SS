@@ -25,7 +25,9 @@ public class FireProjectile : MonoBehaviour
        if(collision.tag == "Enemy")//This if statement destroys any game object with the tag "Enemy".
        {
            FindObjectOfType<AudioManager>().Play("FireBallDeath");
+           CoinCounter.coinAmount += 1;
            Destroy(collision.gameObject);
+
            Destroy(gameObject);
        } 
     }
