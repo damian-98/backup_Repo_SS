@@ -97,7 +97,7 @@
 /reference:"Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll"
 /reference:"Library/ScriptAssemblies/Unity.TextMeshPro.dll"
 /reference:"Library/ScriptAssemblies/UnityEditor.UI.dll"
-/reference:"/Users/youngmellyworld/PlatformerGameRepo/backup_Repo_SS-2/Seminar2DGame/Library/PackageCache/com.unity.connect.share@2.0.3/Plugins/System.IO.Compression.FileSystem.dll"
+/reference:"/Users/DAM1998/GitHub/Senior_2D_Game_Project/Project/Seminar2DGame/Library/PackageCache/com.unity.connect.share@2.0.3/Plugins/System.IO.Compression.FileSystem.dll"
 /reference:"/Applications/Unity/Hub/Editor/2019.4.18f1/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll"
 /reference:"/Applications/Unity/Hub/Editor/2019.4.18f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/Microsoft.Win32.Primitives.dll"
 /reference:"/Applications/Unity/Hub/Editor/2019.4.18f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.AppContext.dll"

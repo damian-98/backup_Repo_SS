@@ -18,10 +18,7 @@ public class EnemyAction : MonoBehaviour
    public int Hitpoints;// This enables the user to set how many times it takes to hit to kill the enemy.
    public int MaxHitpoints = 5;//This sets the max hit points.
    public HealthBar Healthbar;// This is referencing my HealthBar script.
-
    public GameObject gameOver;// This gameOver object will be used to hold the Game Over text.
-
-  
 
     void Start()
     {
@@ -30,6 +27,7 @@ public class EnemyAction : MonoBehaviour
         gameOver.SetActive(false);// SetActive false means that the Game Over text will not pop up as soon as the game starts.
     }
 // #2: ####################################################################################################################################################
+
    public void TakeDamage(int damage){
        Hitpoints -= damage;
        Healthbar.SetMaxHealth(Hitpoints, MaxHitpoints);
@@ -40,15 +38,14 @@ public class EnemyAction : MonoBehaviour
             
            Destroy(gameObject);
         }
-        
        Debug.Log("damage taken");// This console log is just proof that I am hitting the enemy and that it is working.
    }
     // #2: ####################################################################################################################################################
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         FindObjectOfType<AudioManager>().Play("PlayerHurt");// The PlayerHurt sound will be played from this object.
         Heart.numOfHearts -= 1;
-
     // #3: ####################################################################################################################################################
 
         if(Heart.numOfHearts <= 0) // This if block is saying if the num of hearts reach 0 then 
