@@ -7,7 +7,8 @@ public class TImeCounter : MonoBehaviour
 {
 
     float currentTime = 0f;
-    float startingTime = 120f;
+    float startingTime = 12f;
+    public GameObject gameOver;
 
     [SerializeField] Text countDown;
 
@@ -29,9 +30,13 @@ public class TImeCounter : MonoBehaviour
             countDown.color = Color.red;
         }
 
-        if(currentTime <= 0)
+        if (currentTime <= 0)
         {
             currentTime = 0;
+            Time.timeScale = 0;
+            FindObjectOfType<AudioManager>().Play("GameOver");
+
+            gameOver.SetActive(true);//SetActive true just enables the Game Over text.
         }
     }
 }

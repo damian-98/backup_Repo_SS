@@ -14119,6 +14119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b54e946804f85446da5c1fe7e0bb92ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOver: {fileID: 738869014}
   countDown: {fileID: 1636857574}
 --- !u!1001 &2081296033
 PrefabInstance:
