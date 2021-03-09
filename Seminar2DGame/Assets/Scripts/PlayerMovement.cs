@@ -14,6 +14,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour{
     public ParticleSystem dust;
@@ -133,6 +134,12 @@ public class PlayerMovement : MonoBehaviour{
             {
                 this.transform.parent = other.transform;
                 isJumping = false;
+            }
+        }
+
+        void OnTriggerEnter2D(Collider2D other){
+            if(other.tag == "FallDetection"){
+                SceneManager.LoadScene("IntroductoryLevelScene");
             }
         }
 

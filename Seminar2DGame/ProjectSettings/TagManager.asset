@@ -8,6 +8,7 @@ TagManager:
   - MGround
   - Enemy
   - Potions
+  - FallDetection
   layers:
   - Default
   - TransparentFX
