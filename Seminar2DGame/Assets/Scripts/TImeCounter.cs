@@ -7,7 +7,7 @@ public class TImeCounter : MonoBehaviour
 {
 
     float currentTime = 0f;
-    float startingTime = 120f;
+    float startingTime = 12f;
     public GameObject gameOver;
 
     [SerializeField] Text countDown;
