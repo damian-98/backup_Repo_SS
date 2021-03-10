@@ -40,6 +40,8 @@ public class PlayerMovement : MonoBehaviour{
     public float jumpTime; //  Initializing the amount of pressure holding down the spacebar to make player jump higher.
     private bool isJumping; // Checks if player is jumping.
     public bool crouch; 
+
+    public EnemyAction enemy; // I referenced from the EnemyAction script
    
     void Start(){
         rb = GetComponent<Rigidbody2D>(); //This line of code is just calling the Rigidbody2D Component which is attached to my player.
@@ -137,8 +139,20 @@ public class PlayerMovement : MonoBehaviour{
             }
         }
 
-        void OnTriggerEnter2D(Collider2D other){
-            if(other.tag == "FallDetection"){
+        void OnTriggerEnter2D(Collider2D other)
+        {
+            if(Heart.numOfHearts <= 1) // This if block is saying if the num of hearts reach 0 then 
+            {                           //the game will be over
+
+                Time.timeScale = 0; // Time.timeScale just means how much time has elapsed since a 
+                                    // certain moment.
+
+                FindObjectOfType<AudioManager>().Play("GameOver");
+
+                enemy.gameOver.SetActive(true);//SetActive true just enables the Game Over text.
+            }
+            else if(other.tag == "FallDetection")
+            {
                 SceneManager.LoadScene("IntroductoryLevelScene");
             }
         }

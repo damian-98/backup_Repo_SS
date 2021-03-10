@@ -9241,6 +9241,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 995024130}
   m_CullTransparentMesh: 0
+--- !u!114 &999825455 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7867512790565391753, guid: d6fa582b2c9e64d948eeee511dfddd70,
+    type: 3}
+  m_PrefabInstance: {fileID: 7867512788611451482}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09b25ff2659ef4dd48659191450cd1c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1005837574
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14368,6 +14380,7 @@ MonoBehaviour:
     m_Bits: 512
   jumpTime: 0.22
   crouch: 0
+  enemy: {fileID: 999825455}
 --- !u!58 &2082194162
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -14450,8 +14463,8 @@ MonoBehaviour:
     m_Bits: 1024
   attackRange: 4.34
   damage: 2
-  firePostion: {fileID: 1529661785}
-  projectile: {fileID: 707834957}
+  FirePrefab: {fileID: 707834961}
+  FirePostion: {fileID: 1529661785}
 --- !u!61 &2082194166
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14822,7 +14835,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -60, y: -91}
+  m_AnchoredPosition: {x: -50, y: -21}
   m_SizeDelta: {x: 88.89032, y: 34.95372}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2119969728

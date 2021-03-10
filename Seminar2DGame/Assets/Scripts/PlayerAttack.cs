@@ -20,10 +20,8 @@ public class PlayerAttack : MonoBehaviour
     public float attackRange;
     public int damage;
 
-    // #2: ###########################################
-    public Transform firePostion;//fire balls
-    public GameObject projectile;//fireball projectile
-    // #2: ###########################################
+   public FireProjectile FirePrefab;
+    public Transform FirePostion;
 
     void Update(){
         if(timeBtwAttack <= 0){// This if statement is saying if timeBtwAttack less or equal to 0 then attack.
@@ -40,7 +38,7 @@ public class PlayerAttack : MonoBehaviour
         // #2: ###########################################
         if(Input.GetKey(KeyCode.M))//This gets input from player to shoot fire balls.
         {
-        Instantiate(projectile, firePostion.position, firePostion.rotation);// This line of code spawns a projectile and where to spawn the projectile.
+        Instantiate(FirePrefab, FirePostion.position, transform.rotation);// This line of code spawns a projectile and where to spawn the projectile.
         }
         // #2: ###########################################
     }
