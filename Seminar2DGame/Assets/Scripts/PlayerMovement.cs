@@ -141,6 +141,9 @@ public class PlayerMovement : MonoBehaviour{
             if(other.tag == "FallDetection"){
                 SceneManager.LoadScene("IntroductoryLevelScene");
             }
+            if(other.tag == "FinishExit"){
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
         }
 
          void OnCollisionExit2D(Collision2D other) 
