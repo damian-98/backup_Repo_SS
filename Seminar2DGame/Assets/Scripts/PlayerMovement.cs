@@ -42,15 +42,40 @@ public class PlayerMovement : MonoBehaviour{
     public bool crouch; 
 
     public EnemyAction enemy; // I referenced from the EnemyAction script
-   
+    
+    public float distance; 
+    public LayerMask whatIsLadder;
+    private bool isClimbing;
+    private float inputVertical; 
+
     void Start(){
         rb = GetComponent<Rigidbody2D>(); //This line of code is just calling the Rigidbody2D Component which is attached to my player.
     }
 
     void FixedUpdate(){
         moveInput = Input.GetAxisRaw("Horizontal"); // This line of code determines how the charater moves on the horizontal axis using the left & right arrow keys.
-
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y); // This code implements speed to the player.
+
+        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, Vector2.up, distance, whatIsLadder);
+
+        if(hitInfo.collider != null){
+            if(Input.GetKeyDown(KeyCode.UpArrow)){
+                isClimbing = true;
+            }
+        } 
+        else{
+            if(Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow)){
+            isClimbing = false;
+            }
+        }
+
+        if(isClimbing == true && hitInfo.collider != null){
+            inputVertical = Input.GetAxisRaw("Vertical");
+            rb.velocity = new Vector2(rb.velocity.x, inputVertical * speed);
+            rb.gravityScale = 0;
+        }else{
+\           rb.gravityScale = 15;
+        }
     }
 
    // #3: ####################################################################################################################################################
