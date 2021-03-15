@@ -74,7 +74,7 @@ public class PlayerMovement : MonoBehaviour{
             rb.velocity = new Vector2(rb.velocity.x, inputVertical * speed);
             rb.gravityScale = 0;
         }else{
-\           rb.gravityScale = 15;
+           rb.gravityScale = 15;
         }
     }
 
