@@ -50,7 +50,7 @@ public class Invunerable : MonoBehaviour
         }
     }
 
-    IEnumerable Flash()
+    IEnumerator Flash()
     {
         for (int i = 0; i < 3; i++)
         {
