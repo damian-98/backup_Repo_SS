@@ -18,19 +18,16 @@ public class FireProjectile : MonoBehaviour
     {
         rigidBody = GetComponent<Rigidbody2D>();
         rigidBody.velocity = transform.right * ProjectileSpeed;
+        Destroy (gameObject, 3f);
     }
 
-    // private void OnTriggerEnter2D(Collider2D collision)
-    // {
-    //    if(collision.tag == "Enemy")//This if statement destroys any game object with the tag "Enemy".
-    //    {
-    //        FindObjectOfType<AudioManager>().Play("FireBallDeath");
-    //        Destroy(collision.gameObject);
-    //    } 
-    // }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject);
+       if(collision.tag == "Enemy")//This if statement destroys any game object with the tag "Enemy".
+       {
+           FindObjectOfType<AudioManager>().Play("FireBallDeath");
+           Destroy(collision.gameObject);
+       } 
     }
 }
 // #1: ##########################################################################################################
