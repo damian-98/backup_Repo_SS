@@ -6,7 +6,9 @@
     #
     # 3: Title: "2D Movement in Unity (Tutorial)" | Author: Brackeys | Source: https://www.youtube.com/watch?v=dwcT-Dch0bA&t=1036s, https://github.com/Brackeys/2D-Movement/blob/master/2D%20Movement/Assets/CharacterController2D.cs | Date retrieved: Date retrieved: 1/27/2021 @ 8:30pm
     #
-    # 4: Title: "HOW TO MAKE A WORKING 2D MOVING PLATFORM-Unity Tutorial" | Author: bblakeyyy | Source: https://www.youtube.com/watch?v=Q8Lb9IhqY0s&list=WL&index=70| Date retrieved: 2/11/2021 @ 10:00am
+    # 4: Title: "HOW TO MAKE A WORKING 2D MOVING PLATFORM-Unity Tutorial" | Author: bblakeyyy | Source: https://www.youtube.com/watch?v=Q8Lb9IhqY0s&list=WL&index=70 | Date retrieved: 2/11/2021 @ 10:00am
+    #
+    # 5: Title: "HOW TO MAKE 2D LADDERS IN UNITY - EASY TUTORIAL" | Author: Blackthornprod | Source: https://www.youtube.com/watch?v=Ln7nv-Y2tf4&list=WL&index=134 | Date retrieved: 3/14/2021 @ 1:00pm
     #
 */
 
@@ -28,7 +30,7 @@ public class PlayerMovement : MonoBehaviour{
 	const float k_CeilingRadius = .2f; // Radius of the overlap circle to determine if the player can stand up
 // ####################################################################################################################################################
 
-    private Rigidbody2D rb;
+    private Rigidbody2D rb; // This variable will be used to refrence unity RigidBody2D  component
     public float speed; // Initializing how fast the player moves.
     public float jumpForce; //  Initializing the amount of force added when the player jumps.
     private float moveInput; // This code detects Weather the user is holding down the left or right arrow keys.
@@ -39,36 +41,51 @@ public class PlayerMovement : MonoBehaviour{
     private float jumpTimeCounter; // This code is used as a Increment of how many times the user jumps.
     public float jumpTime; //  Initializing the amount of pressure holding down the spacebar to make player jump higher.
     private bool isJumping; // Checks if player is jumping.
-    public bool crouch; 
-
+    public bool crouch; // Checks if player is crouching
     public EnemyAction enemy; // I referenced from the EnemyAction script
-    
-    public float distance; 
-    public LayerMask whatIsLadder;
-    private bool isClimbing;
-    private float inputVertical; 
+    public float distance; //This varaible will be used to determine how far the ray from the raycast will go
+
+    public LayerMask whatIsLadder; /* This will create a drop down menu in the inspector so that you can choose different layers
+                                   also this will be how the ray can detect using the layers
+                                   */
+    private bool isClimbing; // Checks if player is climbing
+    private float inputVertical; // This inputVertical variable will be used to detect weather player is holding up or down keys
 
     void Start(){
         rb = GetComponent<Rigidbody2D>(); //This line of code is just calling the Rigidbody2D Component which is attached to my player.
     }
 
-    void FixedUpdate(){
-        moveInput = Input.GetAxisRaw("Horizontal"); // This line of code determines how the charater moves on the horizontal axis using the left & right arrow keys.
-        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y); // This code implements speed to the player.
+    void FixedUpdate(){ // The FixedUpdate method is used to manipulate all physics aspects of the game
 
+        moveInput = Input.GetAxisRaw("Horizontal"); // This line of code determines how the charater moves on the horizontal axis using the left & right arrow keys.
+        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y); // This code implements movement to the player.
+
+         // #5: ####################################################################################################################################################
+
+        /*This line of code will shoot a invisible ray from the player to detect when it hits a object of layer "Ladder" and it then will allow 
+        player to move up and down with arrow key on the ladder if object is of layer Ladder
+        */
         RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, Vector2.up, distance, whatIsLadder);
 
-        if(hitInfo.collider != null){
+        if(hitInfo.collider != null){   /* This entire if statment is saying if ray has collided with layer of 
+                                          ladder and if player is pressing up arrow key then player is climbing.
+                                        */
             if(Input.GetKeyDown(KeyCode.UpArrow)){
                 isClimbing = true;
             }
         } 
-        else{
-            if(Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow)){
+        else if(Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow)){ /*This else if statment is saying if
+                                                                                               player get input from left or right key arrow then climbing ladder is false
+                                                                                              */
             isClimbing = false;
             }
-        }
+        
 
+        /* 
+        This block of code is saying if climbing is true and the ray
+        from the raycaster hits layer of ladder then player can go up the ladder at a certain speed with a gravity of 0
+        so player doesn't fall off while climbing and if player isn't climbing then gravity goes back to 15;
+        */
         if(isClimbing == true && hitInfo.collider != null){
             inputVertical = Input.GetAxisRaw("Vertical");
             rb.velocity = new Vector2(rb.velocity.x, inputVertical * speed);
@@ -76,6 +93,7 @@ public class PlayerMovement : MonoBehaviour{
         }else{
            rb.gravityScale = 15;
         }
+         // #5: ####################################################################################################################################################
     }
 
    // #3: ####################################################################################################################################################
