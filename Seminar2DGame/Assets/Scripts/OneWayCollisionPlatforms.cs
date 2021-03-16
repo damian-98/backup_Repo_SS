@@ -24,14 +24,14 @@ public class OneWayCollisionPlatforms : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyUp(KeyCode.DownArrow)){ /* This if statement just checks if the down key has been released
-                                                  and if it has then waitTime goes back to 0.3f
+                                                  and if it has then waitTime goes back to 0.1f
                                                 */
             waitTime = 0.1f;
         }
 
         if(Input.GetKey(KeyCode.DownArrow)){
             if(waitTime <= 0){ /* This if statement is saying if waitTime is less or equal to 0 then platform will let player fall down
-                                 and waitTime will be set back to 0.3f
+                                 and waitTime will be set back to 0.1f
                                 */
                 effector.rotationalOffset = 180f; // This line of code lets player fall underneath the platform
                 waitTime = 0.1f;
