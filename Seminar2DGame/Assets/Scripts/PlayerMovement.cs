@@ -21,6 +21,7 @@ using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour{
     public ParticleSystem dust;
    public GameObject player;
+   public Animator animator;
 // #3: ####################################################################################################################################################
 	[Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;			// Amount of maxSpeed applied to crouching movement. 1 = 100%
 	[SerializeField] private Transform m_GroundCheck;							// A position marking where to check if the player is grounded.
@@ -33,14 +34,14 @@ public class PlayerMovement : MonoBehaviour{
     private Rigidbody2D rb; // This variable will be used to refrence unity RigidBody2D  component
     public float speed; // Initializing how fast the player moves.
     public float jumpForce; //  Initializing the amount of force added when the player jumps.
-    private float moveInput; // This code detects Weather the user is holding down the left or right arrow keys.
+    private float moveInput =36f; // This code detects Weather the user is holding down the left or right arrow keys.
     private bool isGrounded; // Checks if player is on the ground.
     public Transform feetPos; // This code will detect if the players feet is on the ground so it can jump.
     public float checkRadius; // This code just enables the  user to change how large they want the radius around the players feet to be.
     public LayerMask whatIsGround; //  Initializing what will be consider solid ground for the player to move on.
     private float jumpTimeCounter; // This code is used as a Increment of how many times the user jumps.
     public float jumpTime; //  Initializing the amount of pressure holding down the spacebar to make player jump higher.
-    private bool isJumping; // Checks if player is jumping.
+    private bool isJumping = false; // Checks if player is jumping.
     public bool crouch; // Checks if player is crouching
     public EnemyAction enemy; // I referenced from the EnemyAction script
     public float distance; //This varaible will be used to determine how far the ray from the raycast will go
@@ -127,6 +128,8 @@ public class PlayerMovement : MonoBehaviour{
     void Update(){
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
 
+        animator.SetFloat("Speed", Mathf.Abs(moveInput));
+
         if(moveInput > 0){ 
             transform.eulerAngles = new Vector3(0, 0, 0); // This code enables the player to face right when user is moving right.
         }
@@ -136,7 +139,8 @@ public class PlayerMovement : MonoBehaviour{
         // #1: ####################################################################################################################################################
          if(Input.GetButtonDown("Jump") && Mathf.Abs(rb.velocity.y) < 0.001f){ // This code enables the spacebar to activate chracter jump when pressed down.
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);// The code also stops charater from jumping Continuously in the air.
-        // ####################################################################################################################################################
+             animator.SetBool("IsJumping", true);
+        //####################################################################################################################################################
             isJumping = true;
             jumpTimeCounter = jumpTime;
             rb.velocity = Vector2.up * jumpForce;
@@ -151,11 +155,13 @@ public class PlayerMovement : MonoBehaviour{
             }
             else{
                 isJumping = false;
+                animator.SetBool("IsJumping", false);
             }
         }
 
         if(Input.GetKeyUp(KeyCode.Space)){ // This if block just detects if the player is holding down on spacebar if not then player will not jump.
             isJumping = false;
+            animator.SetBool("IsJumping", false);
         }
         // #3: ####################################################################################################################################################
         if (Input.GetButtonDown("Crouch")){
@@ -165,6 +171,13 @@ public class PlayerMovement : MonoBehaviour{
 			crouch = false;
 		}
         // ####################################################################################################################################################
+    }
+    
+     public void OnLanding () 
+    {
+
+        animator.SetBool("IsJumping", false);
+
     }
 
     // #4: ####################################################################################################################################################
