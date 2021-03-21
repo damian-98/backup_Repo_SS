@@ -44,8 +44,7 @@ public class PlayerMovement : MonoBehaviour{
     private bool isJumping = false; // Checks if player is jumping.
     public bool crouch; // Checks if player is crouching
     public EnemyAction enemy; // I referenced from the EnemyAction script
-    public float distance; //This varaible will be used to determine how far the ray from the raycast will go
-
+    public float distance; //This varaible will be used to determine how far the ray from the raycast will go 
     public LayerMask whatIsLadder; /* This will create a drop down menu in the inspector so that you can choose different layers
                                    also this will be how the ray can detect using the layers
                                    */
