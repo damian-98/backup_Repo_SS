@@ -20638,6 +20638,7 @@ MonoBehaviour:
   m_GroundCheck: {fileID: 0}
   m_CeilingCheck: {fileID: 0}
   m_CrouchDisableCollider: {fileID: 2082194163}
+  spawnPoint: {fileID: 0}
   speed: 140
   jumpForce: 300
   feetPos: {fileID: 1775611532}

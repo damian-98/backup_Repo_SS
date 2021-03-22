@@ -6,7 +6,11 @@ public class Invunerable : MonoBehaviour
 {
 
     float timer;
-    bool invincible = false;
+    private bool invincible = false;
+    public float timeStartInvincible = 3f;
+    public float currentInvincibleTime = 0f;
+
+
 
     Material mWhite;
     Material mDefault;
@@ -35,7 +39,28 @@ public class Invunerable : MonoBehaviour
             invinciblePeriod();
         }
     }
+  /*
+    void Update()
+    {
+        
+        if (invincible) {
+            timer -= Time.deltaTime;
+            StartCoroutine("Flash");
+        }
+        if (timer < 0) {
+            invincible = false;
+        }
+    }
 
+    void OnTriggerEnter2D(Collider2D collisionWithEnemy)
+    {
+        if (collisionWithEnemy.CompareTag("Enemy") && !invincible)
+        {
+            invincible = true;
+            currentInvincibleTime = timeStartInvincible;
+        }
+    }
+    */
     void invinciblePeriod()
     {
         timer = 1;

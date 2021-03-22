@@ -196,20 +196,9 @@ public class PlayerMovement : MonoBehaviour{
 
         void OnTriggerEnter2D(Collider2D other)
         {
-            if(Heart.numOfHearts <= 1) // This if block is saying if the num of hearts reach 0 then 
-            {                           //the game will be over
-
-                Time.timeScale = 0; // Time.timeScale just means how much time has elapsed since a 
-                                    // certain moment.
-
-                FindObjectOfType<AudioManager>().Play("GameOver");
-
-                enemy.gameOver.SetActive(true);//SetActive true just enables the Game Over text.
-            }
-            else if(other.tag == "FallDetection")
+            if(other.tag == "FallDetection")
             {
-                SceneManager.LoadScene("IntroductoryLevelScene");
-                Heart.numOfHearts -= 2;
+            SceneManager.LoadScene("IntroductoryLevelScene");
             }
         }
 
