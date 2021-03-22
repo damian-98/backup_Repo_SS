@@ -209,6 +209,7 @@ public class PlayerMovement : MonoBehaviour{
             else if(other.tag == "FallDetection")
             {
                 SceneManager.LoadScene("IntroductoryLevelScene");
+                Heart.numOfHearts -= 2;
             }
         }
 

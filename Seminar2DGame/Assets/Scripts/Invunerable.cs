@@ -31,14 +31,9 @@ public class Invunerable : MonoBehaviour
     {
         if (collision.collider.CompareTag("Enemy"))
         {
-            Invon();
+            StartCoroutine("Flash");
+            invinciblePeriod();
         }
-    }
-
-    void Invon()
-    {
-        StartCoroutine("Flash");
-        invinciblePeriod();
     }
 
     void invinciblePeriod()
