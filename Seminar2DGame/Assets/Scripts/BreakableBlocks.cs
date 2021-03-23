@@ -7,6 +7,15 @@ public class BreakableBlocks : MonoBehaviour
     private ParticleSystem particle;
     private SpriteRenderer sr;
     private BoxCollider2D bc;
+    public GameObject block;
+    public GameObject potion;
+
+    private void Start()
+    {
+        block.SetActive(false);
+        potion.SetActive(false);
+
+    }
 
     private void Awake()
     {
@@ -20,6 +29,8 @@ public class BreakableBlocks : MonoBehaviour
             collision.contacts[0].normal.y > 0.5f)
         {
             StartCoroutine("Break");
+            block.SetActive(true);
+            potion.SetActive(true);
         }
     }
 
