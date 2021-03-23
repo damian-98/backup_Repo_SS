@@ -264,7 +264,6 @@ GameObject:
   m_Component:
   - component: {fileID: 344222707}
   - component: {fileID: 344222705}
-  - component: {fileID: 344222706}
   m_Layer: 5
   m_Name: QuitScreen
   m_TagString: Untagged
@@ -281,19 +280,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 344222704}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be3ed3ba62a6c48998a67e9c8abdd0da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &344222706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 344222704}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be3ed3ba62a6c48998a67e9c8abdd0da, type: 3}
+  m_Script: {fileID: 11500000, guid: 959322ae7cec04dcdba2a286f5a7bcd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!224 &344222707
@@ -520,7 +507,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7b8369dc135c84b4599bef43c7eb1f4a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 806c425cf6b1c422ea3d55c88753bbc5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
