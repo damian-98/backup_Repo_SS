@@ -194,13 +194,13 @@ public class PlayerMovement : MonoBehaviour{
             }
         }
 
-        void OnTriggerEnter2D(Collider2D other)
+      /*  void OnTriggerEnter2D(Collider2D other)
         {
             if(other.tag == "FallDetection")
             {
             SceneManager.LoadScene("IntroductoryLevelScene");
             }
-        }
+        }*/
 
          void OnCollisionExit2D(Collision2D other) 
         {

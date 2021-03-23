@@ -11,6 +11,7 @@ public class FallRespawn : MonoBehaviour
         if (collision.transform.CompareTag("Player"))
         {
             collision.transform.position = spawnPoint.position;
+            Heart.numOfHearts -= 1;
         }
     }
 }
