@@ -128,12 +128,14 @@ public class PlayerMovement : MonoBehaviour{
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
 
         animator.SetFloat("Speed", Mathf.Abs(moveInput));
-
+        
         if(moveInput > 0){ 
             transform.eulerAngles = new Vector3(0, 0, 0); // This code enables the player to face right when user is moving right.
         }
         else if(moveInput < 0){
             transform.eulerAngles = new Vector3(0, 180, 0); // This code enables the player to face left when user is moving left. 
+        }else{
+            FindObjectOfType<AudioManager>().Play("PlayerRun");
         }
         // #1: ####################################################################################################################################################
          if(Input.GetButtonDown("Jump") && Mathf.Abs(rb.velocity.y) < 0.001f){ // This code enables the spacebar to activate chracter jump when pressed down.

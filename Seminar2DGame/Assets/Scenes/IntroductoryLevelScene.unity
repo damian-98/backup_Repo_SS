@@ -9515,6 +9515,18 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: PlayerDeath
+    clip: {fileID: 8300000, guid: e2d0b5c34f54d4a12a4887c1f941bb1c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PlayerRun
+    clip: {fileID: 8300000, guid: f958688fb998c49d8a1c343c8cb0c449, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &776720167
 Transform:
   m_ObjectHideFlags: 0
