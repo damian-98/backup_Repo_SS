@@ -6845,6 +6845,7 @@ GameObject:
   - component: {fileID: 363388323}
   - component: {fileID: 363388322}
   - component: {fileID: 363388321}
+  - component: {fileID: 363388324}
   m_Layer: 0
   m_Name: Trampoline (2)
   m_TagString: Untagged
@@ -6942,6 +6943,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &363388324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363388320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a9c56a89672540c8b7ceade662cc2f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &364143245 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3122697931239076380, guid: 9fcbf5334e12545cdb417c8587c148b9,
@@ -9523,6 +9536,12 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: PlayerRun
     clip: {fileID: 8300000, guid: f958688fb998c49d8a1c343c8cb0c449, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: TrampolineBounce
+    clip: {fileID: 8300000, guid: c458194c3dcb44781baa3814604f5f5e, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -15089,6 +15108,7 @@ GameObject:
   - component: {fileID: 966213060}
   - component: {fileID: 966213059}
   - component: {fileID: 966213058}
+  - component: {fileID: 966213061}
   m_Layer: 0
   m_Name: Trampoline (1)
   m_TagString: Untagged
@@ -15186,6 +15206,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &966213061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966213057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a9c56a89672540c8b7ceade662cc2f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &995024130
 GameObject:
   m_ObjectHideFlags: 0
@@ -21149,7 +21181,7 @@ Transform:
   m_GameObject: {fileID: 2082194158}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -310.09, y: -173, z: 0}
-  m_LocalScale: {x: 28, y: 28, z: 1.3804}
+  m_LocalScale: {x: 36, y: 36, z: 1.3804}
   m_Children:
   - {fileID: 1775611532}
   - {fileID: 1792884679}
@@ -21571,7 +21603,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 176.7
+  field of view: 177
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
