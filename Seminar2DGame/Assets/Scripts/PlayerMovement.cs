@@ -187,12 +187,14 @@ public class PlayerMovement : MonoBehaviour{
             if(other.gameObject.CompareTag("Ground")) //this if block just makes sure once the player jumps in the air that it cant jump again.
             {
                 isJumping = false;
+                FindObjectOfType<AudioManager>().Play("PlayerLand");
             }
 
             if(other.gameObject.CompareTag("MGround")) //This if statement is just saying whenever the player collides with the object with tag MGround then player object will become a child of that object.
             {
                 this.transform.parent = other.transform;
                 isJumping = false;
+                FindObjectOfType<AudioManager>().Play("PlayerLand");
             }
         }
 
@@ -209,12 +211,14 @@ public class PlayerMovement : MonoBehaviour{
             if(other.gameObject.CompareTag("Ground")) 
             {
                 isJumping = true;
+                FindObjectOfType<AudioManager>().Play("PlayerJump");
             }
 
             if(other.gameObject.CompareTag("MGround"))// This if block is saying once the player jumps from the game object tagged MGround that it will become its own parent again.
             {
                 this.transform.parent = null;
                 isJumping = true;
+                FindObjectOfType<AudioManager>().Play("PlayerJump");
             }
         }
 

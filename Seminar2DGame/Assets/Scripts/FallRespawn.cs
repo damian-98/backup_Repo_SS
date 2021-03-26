@@ -14,7 +14,8 @@ public class FallRespawn : MonoBehaviour
         {
             collision.transform.position = spawnPoint.position;
             Heart.numOfHearts -= 1;
-    
+            
+             FindObjectOfType<AudioManager>().Play("PlayerHurt");
             if(Heart.numOfHearts <= 0) // This if block is saying if the num of hearts reach 0 then 
                                     //the game will be over
             {
@@ -22,7 +23,7 @@ public class FallRespawn : MonoBehaviour
                                 // certain moment.
 
             FindObjectOfType<AudioManager>().Play("GameOver");
-
+            FindObjectOfType<AudioManager>().Play("PlayerDeath");
             gameOver.SetActive(true);//SetActive true just enables the Game Over text.
             }
         }
