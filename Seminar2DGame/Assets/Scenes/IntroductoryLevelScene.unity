@@ -297,6 +297,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1696971495}
     m_Modifications:
+    - target: {fileID: 5517401951057279649, guid: 648b3866326ae4a35bc19c246c9d81b7,
+        type: 3}
+      propertyPath: m_UsedByEffector
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5517401951057279650, guid: 648b3866326ae4a35bc19c246c9d81b7,
         type: 3}
       propertyPath: m_RootOrder
@@ -7980,6 +7985,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StaticPlatform (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 3122697931239076386, guid: 9fcbf5334e12545cdb417c8587c148b9,
+        type: 3}
+      propertyPath: m_UsedByEffector
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9fcbf5334e12545cdb417c8587c148b9, type: 3}
 --- !u!1 &548873125 stripped
@@ -9065,6 +9075,44 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &722047143 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5517401951057279653, guid: 648b3866326ae4a35bc19c246c9d81b7,
+    type: 3}
+  m_PrefabInstance: {fileID: 72891191}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &722047147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722047143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db87ca299d1ea4561a47c0a110a55052, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitTime: 0
+--- !u!251 &722047148
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722047143}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!4 &726057513 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2483586467927452250, guid: d5c88c9ba621142c1accc0a4c737f04f,
@@ -16575,6 +16623,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1696971495}
     m_Modifications:
+    - target: {fileID: 5517401951057279649, guid: 648b3866326ae4a35bc19c246c9d81b7,
+        type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5517401951057279650, guid: 648b3866326ae4a35bc19c246c9d81b7,
         type: 3}
       propertyPath: m_RootOrder
@@ -16777,7 +16830,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 59243975df4254c5482f44e9d10d7da8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0198502bf518d46369b832b273e5e8dc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -18378,7 +18431,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 59243975df4254c5482f44e9d10d7da8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0198502bf518d46369b832b273e5e8dc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -18639,6 +18692,38 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 5
+--- !u!114 &1741615269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741615264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db87ca299d1ea4561a47c0a110a55052, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitTime: 0
+--- !u!251 &1741615270
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741615264}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!4 &1742385475 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3122697931239076380, guid: 9fcbf5334e12545cdb417c8587c148b9,
@@ -19305,7 +19390,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 59243975df4254c5482f44e9d10d7da8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0198502bf518d46369b832b273e5e8dc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -19576,7 +19661,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
-  m_FillRect: {fileID: 0}
+  m_FillRect: {fileID: 1284783009}
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
