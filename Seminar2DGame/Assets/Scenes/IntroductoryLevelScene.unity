@@ -9922,8 +9922,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 814448707}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1134, y: -158.7, z: 0}
-  m_LocalScale: {x: 232.4148, y: 149.1344, z: 0.5681818}
+  m_LocalPosition: {x: 2546, y: -299, z: 0}
+  m_LocalScale: {x: 462.35425, y: 292.7603, z: 0.5681818}
   m_Children: []
   m_Father: {fileID: 738869017}
   m_RootOrder: 0
@@ -21293,6 +21293,7 @@ GameObject:
   - component: {fileID: 2082194168}
   - component: {fileID: 2082194169}
   - component: {fileID: 2082194170}
+  - component: {fileID: 2082194171}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -21575,6 +21576,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeStartInvincible: 3
   currentInvincibleTime: 0
+--- !u!114 &2082194171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082194158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4117d23932d447a384edb5a1b439d92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 2082194161}
+  moveInput: 10
+  isJumping: 0
 --- !u!4 &2088323023 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7867512790565391765, guid: d6fa582b2c9e64d948eeee511dfddd70,
