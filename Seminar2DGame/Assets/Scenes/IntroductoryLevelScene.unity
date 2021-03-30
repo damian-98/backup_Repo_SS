@@ -11364,7 +11364,7 @@ SpriteRenderer:
   m_Size: {x: 7.6354833, y: 30.13}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &261782414
@@ -11998,7 +11998,7 @@ SpriteRenderer:
   m_Size: {x: 12, y: 12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &363388323
@@ -12146,7 +12146,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 199, y: -384}
+  m_AnchoredPosition: {x: 204, y: -358}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &377534817
@@ -12700,7 +12700,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -63, y: 3}
+  m_AnchoredPosition: {x: -66, y: 26}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &503266397
@@ -13524,7 +13524,7 @@ SpriteRenderer:
   m_Size: {x: 7.6354833, y: 30.13}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &571198938
@@ -15165,8 +15165,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 814448707}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2546, y: -299, z: 0}
-  m_LocalScale: {x: 462.35425, y: 292.7603, z: 0.5681818}
+  m_LocalPosition: {x: 3164, y: 34, z: 0}
+  m_LocalScale: {x: 541.5213, y: 345.5383, z: 0.5681818}
   m_Children: []
   m_Father: {fileID: 738869017}
   m_RootOrder: 0
@@ -15218,7 +15218,7 @@ SpriteRenderer:
   m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &829088483
@@ -20719,7 +20719,7 @@ SpriteRenderer:
   m_Size: {x: 12, y: 12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &966213060
@@ -32388,7 +32388,7 @@ SpriteRenderer:
   m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1425783461
@@ -32846,7 +32846,7 @@ SpriteRenderer:
   m_Size: {x: 7.6354833, y: 30.13}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1451144872
@@ -34118,7 +34118,7 @@ SpriteRenderer:
   m_Size: {x: 7.6354833, y: 30.13}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1719514739
@@ -35289,7 +35289,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 356, y: -225}
+  m_AnchoredPosition: {x: 356, y: -199}
   m_SizeDelta: {x: 94.4451, y: 36.918507}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1902428511
@@ -37092,7 +37092,6 @@ GameObject:
   - component: {fileID: 2082194168}
   - component: {fileID: 2082194169}
   - component: {fileID: 2082194170}
-  - component: {fileID: 2082194171}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -37375,18 +37374,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeStartInvincible: 3
   currentInvincibleTime: 0
---- !u!114 &2082194171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2082194158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4117d23932d447a384edb5a1b439d92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2088323023 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7867512790565391765, guid: d6fa582b2c9e64d948eeee511dfddd70,
@@ -37683,7 +37670,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -58, y: -92}
+  m_AnchoredPosition: {x: -58, y: -69}
   m_SizeDelta: {x: 88.89032, y: 34.95372}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2119969728
