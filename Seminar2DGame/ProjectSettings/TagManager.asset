@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Potions
   - FallDetection
+  - FireBall
   layers:
   - Default
   - TransparentFX
