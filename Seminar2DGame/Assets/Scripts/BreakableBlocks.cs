@@ -8,12 +8,12 @@ public class BreakableBlocks : MonoBehaviour
     private SpriteRenderer sr;
     private BoxCollider2D bc;
     public GameObject block;
-    public GameObject potion;
+    public GameObject fireball;
 
     private void Start()
     {
         block.SetActive(false);
-        potion.SetActive(false);
+        fireball.SetActive(false);
 
     }
 
@@ -30,7 +30,7 @@ public class BreakableBlocks : MonoBehaviour
         {
             StartCoroutine("Break");
             block.SetActive(true);
-            potion.SetActive(true);
+            fireball.SetActive(true);
         }
     }
 
