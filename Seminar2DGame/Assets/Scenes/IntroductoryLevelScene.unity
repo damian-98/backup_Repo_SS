@@ -7078,7 +7078,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 199, y: -406}
+  m_AnchoredPosition: {x: 199, y: -384}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &377534817
@@ -9857,6 +9857,7 @@ GameObject:
   m_Component:
   - component: {fileID: 787771733}
   - component: {fileID: 787771732}
+  - component: {fileID: 787771734}
   m_Layer: 0
   m_Name: Block Tiles
   m_TagString: Untagged
@@ -9928,6 +9929,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &787771734
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787771731}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.8125, y: -0.8125}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 1}
+    oldSize: {x: 1.625, y: 1.625}
+    newSize: {x: 1.625, y: 1.625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.625, y: 1.625}
+  m_EdgeRadius: 0
 --- !u!1 &788389790 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3122697931239076382, guid: 9fcbf5334e12545cdb417c8587c148b9,
@@ -18693,6 +18720,7 @@ GameObject:
   - component: {fileID: 1706224332}
   - component: {fileID: 1706224331}
   - component: {fileID: 1706224330}
+  - component: {fileID: 1706224333}
   m_Layer: 0
   m_Name: Fire
   m_TagString: FireBall
@@ -18780,6 +18808,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1706224333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706224329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a310edfa46bd54325ac2bb05b98b5e7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1717764830 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2483586467927452250, guid: d5c88c9ba621142c1accc0a4c737f04f,
@@ -19805,6 +19845,7 @@ GameObject:
   - component: {fileID: 1902428510}
   - component: {fileID: 1902428512}
   - component: {fileID: 1902428511}
+  - component: {fileID: 1902428513}
   m_Layer: 10
   m_Name: FireBallCounter
   m_TagString: Untagged
@@ -19828,7 +19869,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 356, y: -247}
+  m_AnchoredPosition: {x: 356, y: -225}
   m_SizeDelta: {x: 94.4451, y: 36.918507}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1902428511
@@ -19872,6 +19913,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1902428509}
   m_CullTransparentMesh: 0
+--- !u!114 &1902428513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902428509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22c7d8fcfc342497299ce0a6b0a732f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1904780875
 GameObject:
   m_ObjectHideFlags: 0
@@ -22210,7 +22263,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -54, y: -132}
+  m_AnchoredPosition: {x: -58, y: -92}
   m_SizeDelta: {x: 88.89032, y: 34.95372}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2119969728
