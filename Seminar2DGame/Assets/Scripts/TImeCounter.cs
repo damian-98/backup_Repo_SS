@@ -36,9 +36,10 @@ public class TImeCounter : MonoBehaviour
             Time.timeScale = 0;
 
             gameOver.SetActive(true);//SetActive true just enables the Game Over text.
-        }else{
-
-            FindObjectOfType<AudioManager>().Play("GameOver");
         }
+        // else{
+
+        //     FindObjectOfType<AudioManager>().Play("GameOver");
+        // }
     }
 }
