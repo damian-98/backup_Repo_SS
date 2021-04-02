@@ -7,7 +7,6 @@ public class coinScript : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col)//The OnTriggerEnter2D method is called
     //when a GameObject collides with another GameObject.
     {
-
         if (col.CompareTag("Player")){
             CoinCounter.coinAmount += 1;
 
