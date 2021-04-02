@@ -10,6 +10,7 @@ TagManager:
   - Potions
   - FallDetection
   - FireBall
+  - Main Camera2
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Ground
   - Enemy
   - Ladder
-  - 
+  - UI_2
   - 
   - 
   - 
