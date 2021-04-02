@@ -32826,6 +32826,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8619424933366735254, guid: ce7ee11cdf897452ab11f56e504f6985,
+        type: 3}
+      propertyPath: Sounds.Array.size
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619424933366735254, guid: ce7ee11cdf897452ab11f56e504f6985,
+        type: 3}
+      propertyPath: Sounds.Array.data[12].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 40fbf49dc857847aa84178acbc5f88cb, type: 3}
+    - target: {fileID: 8619424933366735254, guid: ce7ee11cdf897452ab11f56e504f6985,
+        type: 3}
+      propertyPath: Sounds.Array.data[12].name
+      value: FireBallSwoosh
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619424933366735254, guid: ce7ee11cdf897452ab11f56e504f6985,
+        type: 3}
+      propertyPath: Sounds.Array.data[12].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619424933366735254, guid: ce7ee11cdf897452ab11f56e504f6985,
+        type: 3}
+      propertyPath: Sounds.Array.data[12].volume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8619424933366735255, guid: ce7ee11cdf897452ab11f56e504f6985,
         type: 3}
       propertyPath: m_RootOrder

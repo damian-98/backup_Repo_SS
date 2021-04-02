@@ -19,6 +19,8 @@ public class FireProjectile : MonoBehaviour
         rigidBody = GetComponent<Rigidbody2D>();
         rigidBody.velocity = transform.right * ProjectileSpeed;
         Destroy (gameObject, 3f);
+
+        FindObjectOfType<AudioManager>().Play("FireBallSwoosh");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
