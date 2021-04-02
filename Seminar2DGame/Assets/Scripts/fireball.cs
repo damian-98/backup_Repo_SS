@@ -8,12 +8,6 @@ public class fireball : MonoBehaviour
     //when a GameObject collides with another GameObject.
     {
         FireBallCounter.fireAmount += 1;
-
-        /*FindObjectOfType<AudioManager>().Play("CoinCollect"); This line of code
-       //just finds the object type that refrences the sound called CoinCollect.
-       I also but that line before the Destroy method so it doesn't prevent 
-       the sound from playing.*/
-
         Destroy(gameObject);
     }
 }

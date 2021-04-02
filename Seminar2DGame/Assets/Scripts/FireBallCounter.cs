@@ -15,6 +15,6 @@ public class FireBallCounter : MonoBehaviour
 
 	void Update()
 	{
-		fireText.text = fireAmount.ToString();
+		fireText.text = fireAmount.ToString("0");
 	}
 }
