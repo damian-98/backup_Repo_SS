@@ -25,16 +25,12 @@ public class FireProjectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       //if (FireBallCounter.fireAmount > 0)
-       // {
             if (collision.tag == "Enemy")//This if statement destroys any game object with the tag "Enemy".
             {
                 FindObjectOfType<AudioManager>().Play("FireBallDeath");
                 Destroy(gameObject);
                 Destroy(collision.gameObject);
             }
-           // FireBallCounter.fireAmount -= 1;
-      //  }
     }
 }
 // #1: ##########################################################################################################

@@ -36,9 +36,10 @@ public class PlayerAttack : MonoBehaviour
             timeBtwAttack -= Time.deltaTime;
         }
         // #2: ###########################################
-        if(Input.GetKeyDown(KeyCode.M))//This gets input from player to shoot fire balls.
+        if(Input.GetKeyDown(KeyCode.M) && FireBallCounter.fireAmount>0)//This gets input from player to shoot fire balls.
         {
         Instantiate(projectile, FirePostion.position, FirePostion.rotation);// This line of code spawns a projectile and where to spawn the projectile.
+            FireBallCounter.fireAmount -= 1;
         }
         // #2: ###########################################
     }
