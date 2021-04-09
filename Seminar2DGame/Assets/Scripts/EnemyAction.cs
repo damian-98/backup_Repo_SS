@@ -54,6 +54,7 @@ public class EnemyAction : MonoBehaviour
         if(Heart.numOfHearts <= 0) // This if block is saying if the num of hearts reach 0 then 
                                     //the game will be over
         {
+            Time.timeScale = 0;
             FindObjectOfType<AudioManager>().Play("PlayerDeath");
             FindObjectOfType<AudioManager>().Play("GameOver");
             animator.SetBool("Dead", true);
