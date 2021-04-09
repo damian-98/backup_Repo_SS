@@ -14,6 +14,7 @@ public class FireProjectile : MonoBehaviour
     public float ProjectileSpeed;// This controls how fast the projectile goes.
     private Rigidbody2D rigidBody;// This Rigidbody2D component is refrenced off of the Fireball prefab.
 
+
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();

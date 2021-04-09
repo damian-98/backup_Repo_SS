@@ -140,7 +140,7 @@ public class PlayerMovement : MonoBehaviour{
         // #1: ####################################################################################################################################################
          if(Input.GetButtonDown("Jump") && Mathf.Abs(rb.velocity.y) < 0.001f){ // This code enables the spacebar to activate chracter jump when pressed down.
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);// The code also stops charater from jumping Continuously in the air.
-             animator.SetBool("IsJumping", true);
+             animator.SetBool("Jumping", true);
         //####################################################################################################################################################
             isJumping = true;
             jumpTimeCounter = jumpTime;
@@ -156,13 +156,11 @@ public class PlayerMovement : MonoBehaviour{
             }
             else{
                 isJumping = false;
-                animator.SetBool("IsJumping", false);
             }
         }
 
         if(Input.GetKeyUp(KeyCode.Space)){ // This if block just detects if the player is holding down on spacebar if not then player will not jump.
             isJumping = false;
-            animator.SetBool("IsJumping", false);
         }
         // #3: ####################################################################################################################################################
         if (Input.GetButtonDown("Crouch")){
@@ -177,7 +175,7 @@ public class PlayerMovement : MonoBehaviour{
      public void OnLanding () 
     {
 
-        animator.SetBool("IsJumping", false);
+        animator.SetBool("Jumping", false);
 
     }
 
@@ -188,13 +186,15 @@ public class PlayerMovement : MonoBehaviour{
             {
                 isJumping = false;
                 FindObjectOfType<AudioManager>().Play("PlayerLand");
-            }
+            animator.SetBool("Jumping", false);
+        }
 
             if(other.gameObject.CompareTag("MGround")) //This if statement is just saying whenever the player collides with the object with tag MGround then player object will become a child of that object.
             {
                 this.transform.parent = other.transform;
                 isJumping = false;
                 FindObjectOfType<AudioManager>().Play("PlayerLand");
+            animator.SetBool("Jumping", false);
             }
         }
 

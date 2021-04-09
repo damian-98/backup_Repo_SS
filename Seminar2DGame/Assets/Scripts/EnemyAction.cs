@@ -19,6 +19,8 @@ public class EnemyAction : MonoBehaviour
    public int MaxHitpoints = 5;//This sets the max hit points.
    public HealthBar Healthbar;// This is referencing my HealthBar script.
    public GameObject gameOver;// This gameOver object will be used to hold the Game Over text.
+    public Animator animator;
+
 
     void Start()
     {
@@ -52,10 +54,10 @@ public class EnemyAction : MonoBehaviour
         if(Heart.numOfHearts <= 0) // This if block is saying if the num of hearts reach 0 then 
                                     //the game will be over
         {
-            Time.timeScale = 0; // Time.timeScale just means how much time has elapsed since a 
-                                // certain moment.
             FindObjectOfType<AudioManager>().Play("PlayerDeath");
             FindObjectOfType<AudioManager>().Play("GameOver");
+            animator.SetBool("Dead", true);
+
 
             gameOver.SetActive(true);//SetActive true just enables the Game Over text.
         }

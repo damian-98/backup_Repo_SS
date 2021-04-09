@@ -27,7 +27,7 @@ public class FallingPlatform : MonoBehaviour
     // Update is called once per frame
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name.Equals("Player") && !ismovingback)
+        if (collision.gameObject.name.Equals("Character") && !ismovingback)
         {
             Invoke("DropPlatform", 0.5f);
         }
