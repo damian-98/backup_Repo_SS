@@ -34,6 +34,7 @@ public class EnemyAction : MonoBehaviour
  
        if(Hitpoints <= 0){// This if statement is saying once the enemy gets hit to many time it will be disapear and get destoryed.
             FindObjectOfType<AudioManager>().Play("EnemyDeath");// The EnemyDeath sound will be played from this object.
+            EnemyCounter.enemyAmount += 1;
             CoinCounter.coinAmount += 2;
             
            Destroy(gameObject);
