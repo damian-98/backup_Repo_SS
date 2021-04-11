@@ -12,6 +12,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyAction : MonoBehaviour
 {
@@ -19,7 +20,11 @@ public class EnemyAction : MonoBehaviour
    public int MaxHitpoints = 5;//This sets the max hit points.
    public HealthBar Healthbar;// This is referencing my HealthBar script.
    public GameObject gameOver;// This gameOver object will be used to hold the Game Over text.
-    public Animator animator;
+   public GameObject winGame;
+   public Animator animator;
+   public EnemySpawner enemySpawner;
+   
+   int eniemesKilled;
 
 
     void Start()
@@ -27,6 +32,7 @@ public class EnemyAction : MonoBehaviour
         Hitpoints = MaxHitpoints;// This means what every number is set for hit points is also the same for max hit points.
         Healthbar.SetMaxHealth(Hitpoints, MaxHitpoints);
         gameOver.SetActive(false);// SetActive false means that the Game Over text will not pop up as soon as the game starts.
+        winGame.SetActive(false);// SetActive false means that
     }
 // #2: ####################################################################################################################################################
 
@@ -37,9 +43,15 @@ public class EnemyAction : MonoBehaviour
        if(Hitpoints <= 0){// This if statement is saying once the enemy gets hit to many time it will be disapear and get destoryed.
             FindObjectOfType<AudioManager>().Play("EnemyDeath");// The EnemyDeath sound will be played from this object.
             EnemyCounter.enemyAmount += 1;
+            eniemesKilled ++;
             CoinCounter.coinAmount += 2;
             
            Destroy(gameObject);
+           if(eniemesKilled == enemySpawner.GetnumberOfEnemies())
+           {
+               Time.timeScale = 0;
+               winGame.SetActive(true);
+           }
         }
        Debug.Log("damage taken");// This console log is just proof that I am hitting the enemy and that it is working.
    }
