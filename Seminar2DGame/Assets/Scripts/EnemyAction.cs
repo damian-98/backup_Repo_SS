@@ -20,11 +20,12 @@ public class EnemyAction : MonoBehaviour
    public int MaxHitpoints = 5;//This sets the max hit points.
    public HealthBar Healthbar;// This is referencing my HealthBar script.
    public GameObject gameOver;// This gameOver object will be used to hold the Game Over text.
-   public GameObject winGame;
    public Animator animator;
+   public GameObject winGame;
+
    public EnemySpawner enemySpawner;
-   
-   int eniemesKilled;
+
+    int eniemesKilled;
 
 
     void Start()
@@ -43,7 +44,7 @@ public class EnemyAction : MonoBehaviour
        if(Hitpoints <= 0){// This if statement is saying once the enemy gets hit to many time it will be disapear and get destoryed.
             FindObjectOfType<AudioManager>().Play("EnemyDeath");// The EnemyDeath sound will be played from this object.
             EnemyCounter.enemyAmount += 1;
-            eniemesKilled ++;
+            eniemesKilled += 1;
             CoinCounter.coinAmount += 2;
             
            Destroy(gameObject);

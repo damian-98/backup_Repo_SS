@@ -26618,6 +26618,11 @@ PrefabInstance:
       propertyPath: enemySpawner
       value: 
       objectReference: {fileID: 1598211561}
+    - target: {fileID: 3313767718194116105, guid: 508306124a1ef4d6cb944334b3aa019a,
+        type: 3}
+      propertyPath: numberOfEnemies
+      value: 
+      objectReference: {fileID: 728249634}
     - target: {fileID: 3313767718194116106, guid: 508306124a1ef4d6cb944334b3aa019a,
         type: 3}
       propertyPath: m_Name
@@ -27055,6 +27060,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5969411888512130456, guid: 006d6f9f3bacf4b4dbd22f2432902136,
         type: 3}
+      propertyPath: numberOfEnemies
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5969411888512130456, guid: 006d6f9f3bacf4b4dbd22f2432902136,
+        type: 3}
       propertyPath: enemyPrefabs.Array.data[0]
       value: 
       objectReference: {fileID: 728249634}
@@ -27068,6 +27078,11 @@ PrefabInstance:
       propertyPath: enemyPrefabs.Array.data[2]
       value: 
       objectReference: {fileID: 851018520}
+    - target: {fileID: 5969411888512130456, guid: 006d6f9f3bacf4b4dbd22f2432902136,
+        type: 3}
+      propertyPath: numberOfEnemiesToKillToWin
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5969411888512130457, guid: 006d6f9f3bacf4b4dbd22f2432902136,
         type: 3}
       propertyPath: m_Name
@@ -27437,7 +27452,7 @@ PrefabInstance:
     - target: {fileID: 8619424933366735254, guid: ce7ee11cdf897452ab11f56e504f6985,
         type: 3}
       propertyPath: Sounds.Array.size
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8619424933366735254, guid: ce7ee11cdf897452ab11f56e504f6985,
         type: 3}
@@ -27451,12 +27466,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8619424933366735254, guid: ce7ee11cdf897452ab11f56e504f6985,
         type: 3}
+      propertyPath: Sounds.Array.data[13].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9c4d4962bf11d4aa8a1de03a21e09a80, type: 3}
+    - target: {fileID: 8619424933366735254, guid: ce7ee11cdf897452ab11f56e504f6985,
+        type: 3}
+      propertyPath: Sounds.Array.data[13].name
+      value: SwordSwhoosh
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619424933366735254, guid: ce7ee11cdf897452ab11f56e504f6985,
+        type: 3}
       propertyPath: Sounds.Array.data[12].pitch
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8619424933366735254, guid: ce7ee11cdf897452ab11f56e504f6985,
         type: 3}
+      propertyPath: Sounds.Array.data[13].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619424933366735254, guid: ce7ee11cdf897452ab11f56e504f6985,
+        type: 3}
       propertyPath: Sounds.Array.data[12].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619424933366735254, guid: ce7ee11cdf897452ab11f56e504f6985,
+        type: 3}
+      propertyPath: Sounds.Array.data[13].volume
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8619424933366735255, guid: ce7ee11cdf897452ab11f56e504f6985,

@@ -18,7 +18,7 @@ public class EnemySpawner : MonoBehaviour
     int randomSpawn, randomEnemy; // vairables
     public static bool spawnAllowed; // bool for spawnAllowed to
                                      //instantiate only if player is alive
-    int numberOfEnemies = 1;                                        
+    public int numberOfEnemiesToKillToWin = 1;                                        
 
     void Start()
     {
@@ -49,7 +49,7 @@ public class EnemySpawner : MonoBehaviour
 
     public int GetnumberOfEnemies()
     {
-        return numberOfEnemies;
+        return numberOfEnemiesToKillToWin;
     }
 }
 // #1: ####################################################################################################################################################

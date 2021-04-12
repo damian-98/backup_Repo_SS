@@ -34,6 +34,7 @@ public class PlayerAttack : MonoBehaviour
 
                 if(animator.GetFloat("Speed") < 0.01 && !animator.GetBool("Jumping"))
                 {
+                    FindObjectOfType<AudioManager>().Play("SwordSwhoosh");
                     animator.SetTrigger("Attack");
                 }
             }
