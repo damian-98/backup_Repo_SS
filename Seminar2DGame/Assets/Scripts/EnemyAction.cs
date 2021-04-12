@@ -54,7 +54,7 @@ public class EnemyAction : MonoBehaviour
                winGame.SetActive(true);
            }
         }
-       Debug.Log("damage taken");// This console log is just proof that I am hitting the enemy and that it is working.
+    //    Debug.Log("damage taken");// This console log is just proof that I am hitting the enemy and that it is working.
    }
     // #2: ####################################################################################################################################################
 
