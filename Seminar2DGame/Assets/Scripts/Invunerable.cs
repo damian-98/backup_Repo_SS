@@ -31,7 +31,7 @@ public class Invunerable : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("Enemy"))
+        if (collision.collider.CompareTag("Enemy") || collision.collider.CompareTag("Ball"))
         {
             StartCoroutine("Flash");
             invinciblePeriod();

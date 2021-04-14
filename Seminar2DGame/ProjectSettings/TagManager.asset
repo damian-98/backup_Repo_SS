@@ -11,6 +11,7 @@ TagManager:
   - FallDetection
   - FireBall
   - Main Camera2
+  - Ball
   layers:
   - Default
   - TransparentFX
