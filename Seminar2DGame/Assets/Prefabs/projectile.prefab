@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 4019885293193227987}
   - component: {fileID: 4223526294152281961}
   - component: {fileID: 8450622377877353418}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: projectile
-  m_TagString: Enemy
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,7 +93,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.1516931}
@@ -111,6 +111,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc8200ebf838b40ee839a823256c4d7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Healthbar: {fileID: 0}
   speed: 150
+  animator: {fileID: 634607762740704772, guid: 10e2ad88f1a854acfb75995c2a87248f, type: 3}
   gameOver: {fileID: 4103504706113626560, guid: 4f450013d35a5440c9cf96c69425d472,
     type: 3}
