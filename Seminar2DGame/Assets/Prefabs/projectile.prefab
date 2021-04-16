@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 4019885293193227987}
   - component: {fileID: 4223526294152281961}
   - component: {fileID: 8450622377877353418}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: projectile
-  m_TagString: Ball
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69,9 +69,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1907945055
+  m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: fe68c6e1242e94a9eab222e1f49440ff, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -111,8 +111,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc8200ebf838b40ee839a823256c4d7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Healthbar: {fileID: 0}
   speed: 150
-  animator: {fileID: 634607762740704772, guid: 10e2ad88f1a854acfb75995c2a87248f, type: 3}
   gameOver: {fileID: 4103504706113626560, guid: 4f450013d35a5440c9cf96c69425d472,
     type: 3}

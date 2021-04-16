@@ -40,9 +40,11 @@ public class EnemyFireball : MonoBehaviour
 		}
 	}
 
-	private void OnCollisionEnter2D(Collision2D collision)
+	private void OnTriggerEnter2D(Collider2D other)
 	{
-		Destroy(gameObject);
+		if(other.CompareTag("Player"))
+ 		{
+		DestroyProjectile();
 		FindObjectOfType<AudioManager>().Play("PlayerHurt");// The PlayerHurt sound will be played from this object.
 		Heart.numOfHearts -= 1;
 		// #3: ####################################################################################################################################################
@@ -55,7 +57,9 @@ public class EnemyFireball : MonoBehaviour
 
 			gameOver.SetActive(true);//SetActive true just enables the Game Over text.
 			Time.timeScale = 0;
+
 		}
+	  }
 	}
 		// #3: ####################################################################################################################################################
 
