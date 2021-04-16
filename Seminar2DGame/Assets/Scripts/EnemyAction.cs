@@ -62,21 +62,25 @@ public class EnemyAction : MonoBehaviour
     {
         FindObjectOfType<AudioManager>().Play("PlayerHurt");// The PlayerHurt sound will be played from this object.
         Heart.numOfHearts -= 1;
-    // #3: ####################################################################################################################################################
+        // #3: ####################################################################################################################################################
 
-        if(Heart.numOfHearts <= 0) // This if block is saying if the num of hearts reach 0 then 
+        if (Heart.numOfHearts <= 0) // This if block is saying if the num of hearts reach 0 then 
                                     //the game will be over
         {
-            Time.timeScale = 0;
-            FindObjectOfType<AudioManager>().Play("PlayerDeath");
-            FindObjectOfType<AudioManager>().Play("GameOver");
-            animator.SetBool("Dead", true);
-
-
-            gameOver.SetActive(true);//SetActive true just enables the Game Over text.
+            StartCoroutine("GameOver");
         }
-     // #3: ####################################################################################################################################################
+        // #3: ####################################################################################################################################################
 
     }
-}
+
+    IEnumerator GameOver()
+    {
+        FindObjectOfType<AudioManager>().Play("PlayerDeath");
+        FindObjectOfType<AudioManager>().Play("GameOver");
+        animator.SetBool("Dead", true);
+        yield return new WaitForSeconds(0.8f);
+        gameOver.SetActive(true);//SetActive true just enables the Game Over text.
+        Time.timeScale = 0;
+    }
+    }
 // 1:####################################################################################################################################################

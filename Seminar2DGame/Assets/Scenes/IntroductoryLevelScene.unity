@@ -22822,7 +22822,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1904780876}
   - component: {fileID: 1904780877}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Enemies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24344,6 +24344,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 634607761449625744, guid: 10e2ad88f1a854acfb75995c2a87248f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 634607761729313335, guid: 10e2ad88f1a854acfb75995c2a87248f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 634607762038818104, guid: 10e2ad88f1a854acfb75995c2a87248f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 634607762040928088, guid: 10e2ad88f1a854acfb75995c2a87248f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 634607762273442486, guid: 10e2ad88f1a854acfb75995c2a87248f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 634607762416022283, guid: 10e2ad88f1a854acfb75995c2a87248f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 634607762514017909, guid: 10e2ad88f1a854acfb75995c2a87248f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 634607762720285248, guid: 10e2ad88f1a854acfb75995c2a87248f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 634607762740704768, guid: 10e2ad88f1a854acfb75995c2a87248f,
         type: 3}
       propertyPath: m_Size.x
@@ -24459,6 +24499,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Character
       objectReference: {fileID: 0}
+    - target: {fileID: 634607762740704776, guid: 10e2ad88f1a854acfb75995c2a87248f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 634607762740704893, guid: 10e2ad88f1a854acfb75995c2a87248f,
         type: 3}
       propertyPath: hearts.Array.data[0]
@@ -24488,6 +24533,26 @@ PrefabInstance:
         type: 3}
       propertyPath: jumpForce
       value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 634607763083671516, guid: 10e2ad88f1a854acfb75995c2a87248f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 634607763151991509, guid: 10e2ad88f1a854acfb75995c2a87248f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 634607763196292086, guid: 10e2ad88f1a854acfb75995c2a87248f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 634607763230755830, guid: 10e2ad88f1a854acfb75995c2a87248f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10e2ad88f1a854acfb75995c2a87248f, type: 3}

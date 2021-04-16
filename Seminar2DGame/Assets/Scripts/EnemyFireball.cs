@@ -10,11 +10,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; //Using Unity's UI library to use the gameOver text
 
-public class EnemyFireball : MonoBehaviour 
+public class EnemyFireball : MonoBehaviour
 {
 
 	private HealthBar Healthbar;// This is referencing my HealthBar script to  access player health.
-	private Transform Player; 
+	private Transform Player;
 	public float speed; // Variable to control the speed of projectile
 	private Vector2 target;
 	public GameObject gameOver;// This gameOver object will be used to hold the Game Over text.
@@ -28,46 +28,41 @@ public class EnemyFireball : MonoBehaviour
 
 	void Update()
 	{
-		transform.position = Vector2.MoveTowards(transform.position,target, speed * Time.deltaTime);// This line of code is going to make the projectile move towards
-																									// gameObject tag "Player" position.
+		transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);// This line of code is going to make the projectile move towards
+																									 // gameObject tag "Player" position.
 
-		if(transform.position.x == target.x && transform.position.y == target.y) // This if block is saying if the projectile is equal to the same postion of
-																				// gameObject tag Player then when projectile reaches player postion
-																				// the projectile will get destoryed.
-																				
+		if (transform.position.x == target.x && transform.position.y == target.y) // This if block is saying if the projectile is equal to the same postion of
+																				  // gameObject tag Player then when projectile reaches player postion
+																				  // the projectile will get destoryed.
+
 		{
 			DestroyProjectile();
 		}
 	}
 
-	void OnTriggerEnter2D(Collider2D other)
+	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		if(other.CompareTag("Player"))// This if statment is saying if the gameObject is tag Player and projectile hits tag Player
-										// it will get destoryed on contact and play playerhurt sound. Also will decrement a heart
-										// sprite from tag Player health.
+		Destroy(gameObject);
+		FindObjectOfType<AudioManager>().Play("PlayerHurt");// The PlayerHurt sound will be played from this object.
+		Heart.numOfHearts -= 1;
+		// #3: ####################################################################################################################################################
+
+		if (Heart.numOfHearts <= 0) // This if block is saying if the num of hearts reach 0 then 
+									//the game will be over
 		{
-			Destroy(gameObject);
-			FindObjectOfType<AudioManager>().Play("PlayerHurt"); // The PlayerHurt sound will be played from this object.
-
-        	Heart.numOfHearts -= 1;
-
-        	if(Heart.numOfHearts <= 0) 	// This if block is saying if the num of hearts reach 0 then 
-                                   		//the game will be over
-        	{
-
-            Time.timeScale = 0; // This line of code just freezes the game.
-
-            FindObjectOfType<AudioManager>().Play("PlayerDeath");
+			FindObjectOfType<AudioManager>().Play("PlayerDeath");
 			FindObjectOfType<AudioManager>().Play("GameOver");
-			gameOver.SetActive(true);//SetActive true just enables the Game Over text.
 
-        	}
+			gameOver.SetActive(true);//SetActive true just enables the Game Over text.
+			Time.timeScale = 0;
 		}
 	}
+		// #3: ####################################################################################################################################################
+
 
 	void DestroyProjectile() // inside this function is a Destroy gameObject method that 
-							// I created in the update method to destroy the projectile
-							// when it finds target gameObject tag Player position.
+							 // I created in the update method to destroy the projectile
+							 // when it finds target gameObject tag Player position.
 	{
 		Destroy(gameObject);
 	}
