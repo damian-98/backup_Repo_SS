@@ -26,7 +26,7 @@ public class PlayerAttack : MonoBehaviour
 
     void Update(){
         //if(timeBtwAttack <= 0){// This if statement is saying if timeBtwAttack less or equal to 0 then attack.
-            if(Input.GetKeyDown(KeyCode.Space)){//This if statement is giving input to the space bar to attack.
+            if(Input.GetKeyDown(KeyCode.Z)){//This if statement is giving input to the space bar to attack.
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);// This code will cast an invisible circle to a certain postion and radius to attack enemy.
                 for(int i = 0; i < enemiesToDamage.Length; i++){
                     enemiesToDamage[i].GetComponent<EnemyAction>().TakeDamage(damage);// for loop will allow the enemy to take damage.
@@ -45,7 +45,7 @@ public class PlayerAttack : MonoBehaviour
 
 
         // #2: ###########################################
-        if(Input.GetKeyDown(KeyCode.M) && FireBallCounter.fireAmount>0)//This gets input from player to shoot fire balls.
+        if(Input.GetKeyDown(KeyCode.X) && FireBallCounter.fireAmount>0)//This gets input from player to shoot fire balls.
         {
         Instantiate(projectile, FirePostion.position, FirePostion.rotation);// This line of code spawns a projectile and where to spawn the projectile.
             FireBallCounter.fireAmount -= 1;
