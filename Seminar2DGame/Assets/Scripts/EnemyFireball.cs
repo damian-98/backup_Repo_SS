@@ -42,8 +42,8 @@ public class EnemyFireball : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D other)
 	{
-		// if(other.CompareTag("Player"))
- 		// {
+		if(other.CompareTag("Player"))
+ 		{
 		DestroyProjectile();
 		FindObjectOfType<AudioManager>().Play("PlayerHurt");// The PlayerHurt sound will be played from this object.
 		Heart.numOfHearts -= 1;
@@ -59,7 +59,7 @@ public class EnemyFireball : MonoBehaviour
 			Time.timeScale = 0;
 
 		}
-	 // }
+	 }
 	}
 		// #3: ####################################################################################################################################################
 
