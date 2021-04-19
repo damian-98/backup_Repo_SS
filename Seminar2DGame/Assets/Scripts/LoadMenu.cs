@@ -13,4 +13,9 @@ public class LoadMenu : MonoBehaviour
    {
        SceneManager.LoadScene("LevelTwo");
    }
+   public void BossLevel()
+   {
+       SceneManager.LoadScene("BossLevel");
+   }
+
 }
