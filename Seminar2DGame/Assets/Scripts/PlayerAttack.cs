@@ -24,7 +24,7 @@ public class PlayerAttack : MonoBehaviour
     public Transform FirePostion;
     public GameObject projectile;
 
-    void Update(){
+    public void Update(){
         //if(timeBtwAttack <= 0){// This if statement is saying if timeBtwAttack less or equal to 0 then attack.
             if(Input.GetKeyDown(KeyCode.Z)){//This if statement is giving input to the space bar to attack.
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);// This code will cast an invisible circle to a certain postion and radius to attack enemy.
