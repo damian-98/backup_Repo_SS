@@ -4,15 +4,33 @@ using UnityEngine;
 
 public class BossAttack : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	public Vector3 attackOffset;
+	public float attackRange = 1f;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	public void Attack()
+	{
+		Vector3 pos = transform.position;
+		pos += transform.right * attackOffset.x;
+		pos += transform.up * attackOffset.y;
+
+		Heart.numOfHearts -= 1;
+	}
+
+	public void EnragedAttack()
+	{
+		Vector3 pos = transform.position;
+		pos += transform.right * attackOffset.x;
+		pos += transform.up * attackOffset.y;
+
+		Heart.numOfHearts -= 1;
+	}
+
+	void OnDrawGizmosSelected()
+	{
+		Vector3 pos = transform.position;
+		pos += transform.right * attackOffset.x;
+		pos += transform.up * attackOffset.y;
+
+		Gizmos.DrawWireSphere(pos, attackRange);
+	}
 }
