@@ -25070,6 +25070,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1904780876}
     m_Modifications:
+    - target: {fileID: 3313767717236313449, guid: 508306124a1ef4d6cb944334b3aa019a,
+        type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313767717236313449, guid: 508306124a1ef4d6cb944334b3aa019a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 3313767718194116105, guid: 508306124a1ef4d6cb944334b3aa019a,
         type: 3}
       propertyPath: win
@@ -25268,6 +25278,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1904780876}
     m_Modifications:
+    - target: {fileID: 4576966098547537831, guid: 27c177a67bdc64e95966031fcdb52f4a,
+        type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576966098547537831, guid: 27c177a67bdc64e95966031fcdb52f4a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 4576966098597161630, guid: 27c177a67bdc64e95966031fcdb52f4a,
         type: 3}
       propertyPath: m_RootOrder
@@ -25576,6 +25596,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5293292298470319727, guid: c2e96f1f7c79d4b0eaaf4fafa24a83ec,
+        type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5293292298470319727, guid: c2e96f1f7c79d4b0eaaf4fafa24a83ec,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2e96f1f7c79d4b0eaaf4fafa24a83ec, type: 3}
 --- !u!1001 &5517401952432361510
