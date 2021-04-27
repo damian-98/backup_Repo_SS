@@ -230,6 +230,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb67bed1b5bd441fb83df4e2a103491c, type: 3}
+--- !u!95 &123147948 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8072980111216547060, guid: cb67bed1b5bd441fb83df4e2a103491c,
+    type: 3}
+  m_PrefabInstance: {fileID: 123147947}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &136448146
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -577,13 +583,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 483292033}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54eccc08ca96f4f02b6c7873eee0f4ea, type: 3}
+  m_Script: {fileID: 11500000, guid: c7b3b7964fbbb478daaadd9f9191a75a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackOffset: {x: -6.92, y: 7, z: 0}
-  attackRange: 4.7
+  attackOffset: {x: -6.17, y: 5.25, z: 0}
+  attackRange: 3.25
   gameover: {fileID: 1520699665}
-  animator: {fileID: 1896604694}
+  animator: {fileID: 123147948}
 --- !u!114 &483292035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1971,12 +1977,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0d4101c1a6b84a9db4db4aa108b9f8d, type: 3}
---- !u!95 &1896604694 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 1196572886084052696, guid: c53fd8f6e79744422965b4e4dc9bda1e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1543581652}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1907129461
 PrefabInstance:
   m_ObjectHideFlags: 0
