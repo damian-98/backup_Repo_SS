@@ -32,6 +32,11 @@ public class FireProjectile : MonoBehaviour
                 Destroy(gameObject);
                 Destroy(collision.gameObject);
             }
+
+            if (collision.name.Equals("Boss"))
+        {
+
+        }
     }
 }
 // #1: ##########################################################################################################

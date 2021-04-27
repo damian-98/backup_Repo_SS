@@ -6912,6 +6912,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 12800000, guid: 8a2b9e2a607dd2143b58c44bc32410b4,
         type: 3}
+    - target: {fileID: 6859766970264437242, guid: 1e1e9f26286bb4ccda346bf52769f3f8,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -58
+      objectReference: {fileID: 0}
     - target: {fileID: 6859766970339646360, guid: 1e1e9f26286bb4ccda346bf52769f3f8,
         type: 3}
       propertyPath: m_Pivot.x
@@ -7116,6 +7121,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 12800000, guid: 8a2b9e2a607dd2143b58c44bc32410b4,
         type: 3}
+    - target: {fileID: 6859766971919160857, guid: 1e1e9f26286bb4ccda346bf52769f3f8,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -66
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859766971919160857, guid: 1e1e9f26286bb4ccda346bf52769f3f8,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6859766972064472818, guid: 1e1e9f26286bb4ccda346bf52769f3f8,
         type: 3}
       propertyPath: m_Sprite
@@ -15020,6 +15035,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8152707625287595305, guid: 17823a8b6f2324031bf07f446bfdb984,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 859808810}
     - target: {fileID: 8152707625287595305, guid: 17823a8b6f2324031bf07f446bfdb984,
         type: 3}
       propertyPath: gameOver

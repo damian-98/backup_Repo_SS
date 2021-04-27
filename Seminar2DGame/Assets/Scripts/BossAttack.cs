@@ -6,6 +6,8 @@ public class BossAttack : MonoBehaviour
 {
 	public Vector3 attackOffset;
 	public float attackRange = 1f;
+	public GameObject gameover;
+	public Animator animator;
 
 	public void Attack()
 	{
@@ -14,6 +16,7 @@ public class BossAttack : MonoBehaviour
 		pos += transform.up * attackOffset.y;
 
 		Heart.numOfHearts -= 1;
+		Over();
 	}
 
 	public void EnragedAttack()
@@ -25,6 +28,14 @@ public class BossAttack : MonoBehaviour
 		Heart.numOfHearts -= 1;
 	}
 
+	public void Over()
+    {
+		if(Heart.numOfHearts == 0)
+        {
+			StartCoroutine("GameOver");
+		}
+    }
+
 	void OnDrawGizmosSelected()
 	{
 		Vector3 pos = transform.position;
@@ -32,5 +43,15 @@ public class BossAttack : MonoBehaviour
 		pos += transform.up * attackOffset.y;
 
 		Gizmos.DrawWireSphere(pos, attackRange);
+	}
+
+	IEnumerator GameOver()
+	{
+		FindObjectOfType<AudioManager>().Play("PlayerDeath");
+		FindObjectOfType<AudioManager>().Play("GameOver");
+		animator.SetBool("Dead", true);
+		yield return new WaitForSeconds(0.8f);
+		gameover.SetActive(true);//SetActive true just enables the Game Over text.
+		Time.timeScale = 0;
 	}
 }
