@@ -22,6 +22,7 @@ public class EnemyAction : MonoBehaviour
    public GameObject gameOver;// This gameOver object will be used to hold the Game Over text.
    public Animator animator;
    public GameObject winGame;
+   public GameObject RetryGame;
 
    public EnemySpawner enemySpawner;
 
@@ -34,6 +35,7 @@ public class EnemyAction : MonoBehaviour
         Healthbar.SetMaxHealth(Hitpoints, MaxHitpoints);
         gameOver.SetActive(false);// SetActive false means that the Game Over text will not pop up as soon as the game starts.
         winGame.SetActive(false);// SetActive false means that
+        RetryGame.SetActive(false);
     }
 // #2: ####################################################################################################################################################
 
@@ -80,6 +82,7 @@ public class EnemyAction : MonoBehaviour
         animator.SetBool("Dead", true);
         yield return new WaitForSeconds(0.8f);
         gameOver.SetActive(true);//SetActive true just enables the Game Over text.
+        RetryGame.SetActive(true);
         Time.timeScale = 0;
     }
     }

@@ -7,6 +7,7 @@ public class BAttack : MonoBehaviour
 	public Vector3 attackOffset;
 	public float attackRange = 1f;
 	public GameObject gameover;
+	public GameObject RetryGame;
 	public Animator animator;
 
 	public void Attack()
@@ -52,6 +53,7 @@ public class BAttack : MonoBehaviour
 		animator.SetBool("Dead", true);
 		yield return new WaitForSeconds(0.8f);
 		gameover.SetActive(true);//SetActive true just enables the Game Over text.
+		RetryGame.SetActive(true);
 		Time.timeScale = 0;
 	}
 }

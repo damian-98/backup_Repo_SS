@@ -9,6 +9,7 @@ public class TImeCounter : MonoBehaviour
     float currentTime = 0f;
     float startingTime = 300f;
     public GameObject gameOver;
+    public GameObject RetryGame;
 
     [SerializeField] Text countDown;
 
@@ -36,6 +37,7 @@ public class TImeCounter : MonoBehaviour
             Time.timeScale = 0;
 
             gameOver.SetActive(true);//SetActive true just enables the Game Over text.
+            RetryGame.SetActive(true);
         }
 
     }

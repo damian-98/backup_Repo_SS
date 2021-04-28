@@ -8,6 +8,7 @@ public class FallRespawn : MonoBehaviour
     public Animator animator;
 
     public GameObject gameOver;// This gameOver object will be used to hold the Game Over text.
+    public GameObject RetryGame;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -32,6 +33,7 @@ public class FallRespawn : MonoBehaviour
         animator.SetBool("Dead", true);
         yield return new WaitForSeconds(0.8f);
         gameOver.SetActive(true);//SetActive true just enables the Game Over text.
+        RetryGame.SetActive(true);
         Time.timeScale = 0;
     }
 }
