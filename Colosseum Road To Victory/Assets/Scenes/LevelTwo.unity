@@ -10999,6 +10999,11 @@ PrefabInstance:
       propertyPath: numberOfEnemies
       value: 
       objectReference: {fileID: 426268994}
+    - target: {fileID: 3313767718194116105, guid: 508306124a1ef4d6cb944334b3aa019a,
+        type: 3}
+      propertyPath: numberOfEnemiesToKillToWin
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3313767718194116106, guid: 508306124a1ef4d6cb944334b3aa019a,
         type: 3}
       propertyPath: m_Name
@@ -13633,6 +13638,11 @@ PrefabInstance:
       propertyPath: numberOfEnemies
       value: 
       objectReference: {fileID: 59969926}
+    - target: {fileID: 3313767718194116105, guid: 508306124a1ef4d6cb944334b3aa019a,
+        type: 3}
+      propertyPath: numberOfEnemiesToKillToWin
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3313767718194116106, guid: 508306124a1ef4d6cb944334b3aa019a,
         type: 3}
       propertyPath: m_Name
@@ -16800,6 +16810,11 @@ PrefabInstance:
       propertyPath: numberOfEnemies
       value: 
       objectReference: {fileID: 443627019}
+    - target: {fileID: 3313767718194116105, guid: 508306124a1ef4d6cb944334b3aa019a,
+        type: 3}
+      propertyPath: numberOfEnemiesToKillToWin
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3313767718194116106, guid: 508306124a1ef4d6cb944334b3aa019a,
         type: 3}
       propertyPath: m_Name
@@ -18674,6 +18689,11 @@ PrefabInstance:
       propertyPath: numberOfEnemies
       value: 
       objectReference: {fileID: 858176793}
+    - target: {fileID: 3313767718194116105, guid: 508306124a1ef4d6cb944334b3aa019a,
+        type: 3}
+      propertyPath: numberOfEnemiesToKillToWin
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3313767718194116106, guid: 508306124a1ef4d6cb944334b3aa019a,
         type: 3}
       propertyPath: m_Name
@@ -18798,6 +18818,11 @@ PrefabInstance:
       propertyPath: numberOfEnemies
       value: 
       objectReference: {fileID: 3313767718215813199}
+    - target: {fileID: 3313767718194116105, guid: 508306124a1ef4d6cb944334b3aa019a,
+        type: 3}
+      propertyPath: numberOfEnemiesToKillToWin
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3313767718194116106, guid: 508306124a1ef4d6cb944334b3aa019a,
         type: 3}
       propertyPath: m_Name

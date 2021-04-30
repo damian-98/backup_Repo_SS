@@ -134,3 +134,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ProjectileSpeed: 200
+  numberOfEnemiesToKillToWin: 1
+  winGame: {fileID: 7780516672420120603, guid: a638525384f924792bd8a8e3ff98c161, type: 3}
