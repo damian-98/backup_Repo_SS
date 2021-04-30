@@ -25,10 +25,5 @@ public class fProjectile : MonoBehaviour
             Destroy(gameObject);
             Destroy(collision.gameObject);
         }
-
-        if (collision.name.Equals("Boss"))
-        {
-
-        }
     }
 }

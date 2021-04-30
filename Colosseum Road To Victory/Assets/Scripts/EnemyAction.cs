@@ -48,7 +48,7 @@ public class EnemyAction : MonoBehaviour
             EnemyCounter.enemyAmount += 1;
             eniemesKilled += 1;
             CoinCounter.coinAmount += 2;
-            
+            x
            Destroy(gameObject);
            if(eniemesKilled == enemySpawner.GetnumberOfEnemies())
            {
